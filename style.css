@@ -1,0 +1,97 @@
+.description {
+  color: #d6d6d6;
+  padding: 30px 10px 10px;
+  font-size: 1em;
+  margin-top: 30px;
+  white-space: pre-line;
+  font-family: monospace;
+  text-shadow: 1px 1px 1px #000;
+  border-top: 1px dotted #d6d6d6;
+}
+
+
+@media (min-width: 500px) {
+  .description {
+    color: rgb(36, 173, 54);
+    padding: 10px;
+    position: relative;
+    font-size: 1.3em;
+    margin-top: 30px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    white-space: pre-line;
+    font-family: monospace;
+    text-shadow: 1px 1px 1px #000;
+    border-style: solid;
+    border-color: #d6d6d6;
+    border-width: 35px 5px 5px;
+    border-radius: 5px;
+    background-color: #121212;
+  }
+  .description::after,
+  .description::before {
+    top: -25px;
+    width: 15px;
+    height: 15px;
+    content: "";
+    display: block;
+    position: absolute;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    border-radius: 100%;
+  }
+  .description::after {
+    right: 10px;
+    background-color: rgb(36, 173, 54);
+  }
+  .description::before {
+    right: 30px;
+    background-color: rgb(203, 50, 50);
+  }
+}
+@media (min-width: 768px) {
+  .description {
+    font-size: 1.5em;
+  }
+}
+
+.blink-cursor {
+  font-weight: bold;
+  background-color: rgb(77, 235, 34);
+  padding: 2px;
+  color: #333;
+
+  animation-name: blink-cursor;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes blink-cursor {
+  0% {}
+  100% {
+    background-color: #333;
+    color: rgb(77, 235, 34);
+  }
+}
+
+
+.bordas-verdes {
+  border-style: solid;
+  border-color: #109e42;
+  border-width: 10px 0 10px 0;
+  text-shadow: 1px 1px 1px #333;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.links a {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 80px;
+}
+.links .fa {
+  font-size: 3em;
+}
