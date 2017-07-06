@@ -62,6 +62,10 @@ body {
   }
 }
 
+#cursor-blink {
+  outline: none;
+}
+
 .blink-cursor {
   font-weight: bold;
   background-color: #8ae234;
