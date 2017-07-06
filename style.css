@@ -10,6 +10,9 @@ body {
   text-shadow: 1px 1px 1px #000;
   border-top: 10px solid #111;
   background-color: #121212;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 500px) {
