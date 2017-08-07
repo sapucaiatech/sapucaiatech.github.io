@@ -1,0 +1,67 @@
+#eventos {
+  border-top: 10px solid #222;
+}
+
+.eventos {
+}
+
+.evento {
+  padding-bottom: 30px;
+  padding-top: 30px;
+
+  .title {
+    margin-bottom: 0.5rem;
+  }
+
+  .data {
+    background-color: $dark;
+    font-weight: bold;
+    display: block;
+    padding: 5px 8px;
+    color: #FFF;
+    &::before {
+      @extend .font-awesome;
+      margin-right: 5px;
+      content: '\f073';
+    }
+  }
+
+  .descricao {
+    margin: 10px 0;
+    white-space: pre-wrap;
+  }
+
+  .links {
+    border-top: 1px solid #666;
+    word-break: break-all;
+    padding: 4px 10px;
+    display: block;
+
+    &:hover {
+      background-color: #eee;
+
+      @media (min-width: 768px) {
+        &::after {
+          content: ' [ ir para ]';
+        }
+      }
+    }
+
+    &::before {
+      @extend .font-awesome;
+      margin-right: 5px;
+    }
+  }
+
+  .local {
+    &::before {
+      content: '\f041';
+    }
+  }
+
+  .link {
+    &::before {
+      content: '\f0c1';
+    }
+  }
+}

@@ -1,8 +1,7 @@
-body {
-  font-family: 'Ubuntu Mono', monospace;
-}
 .description {
-  color: #8ae234;
+  @extend .max_1000;
+
+  color: $verde;
   padding: 15px 15px 30px;
   font-size: 1em;
   white-space: pre-line;
@@ -10,19 +9,13 @@ body {
   text-shadow: 1px 1px 1px #000;
   border-top: 10px solid #111;
   background-color: #121212;
-  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-}
 
-@media (max-width: 500px) {
-  .description {
+  @media (max-width: 500px) {
     margin: 35px -25px -48px;
   }
-}
-
-@media (min-width: 500px) {
-  .description {
+  @media (min-width: 500px) {
     padding: 10px;
     position: relative;
     font-size: 1.1em;
@@ -35,32 +28,33 @@ body {
     border-color: #d6d6d6;
     border-width: 35px 5px 5px;
     border-radius: 5px;
+
+    &::after,
+    &::before {
+      top: -25px;
+      width: 15px;
+      height: 15px;
+      content: "";
+      display: block;
+      position: absolute;
+      box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+      border-radius: 100%;
+    }
+    &::after {
+      right: 10px;
+      background-color: rgb(36, 173, 54);
+    }
+    &::before {
+      right: 30px;
+      background-color: rgb(203, 50, 50);
+    }
   }
-  .description::after,
-  .description::before {
-    top: -25px;
-    width: 15px;
-    height: 15px;
-    content: "";
-    display: block;
-    position: absolute;
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    border-radius: 100%;
-  }
-  .description::after {
-    right: 10px;
-    background-color: rgb(36, 173, 54);
-  }
-  .description::before {
-    right: 30px;
-    background-color: rgb(203, 50, 50);
-  }
-}
-@media (min-width: 768px) {
-  .description {
+  @media (min-width: 768px) {
     font-size: 1.3em;
   }
 }
+
+
 
 #cursor-blink {
   outline: none;
@@ -68,7 +62,7 @@ body {
 
 .blink-cursor {
   font-weight: bold;
-  background-color: #8ae234;
+  background-color: $verde;
   padding: 2px;
   color: #333;
 
@@ -82,25 +76,6 @@ body {
   0% {}
   100% {
     background-color: #333;
-    color: #8ae234;
+    color: $verde;
   }
-}
-
-.contatos {
-  border-top: 10px solid #111;
-}
-.links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.links a {
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 80px;
-}
-.links .fa {
-  font-size: 3em;
 }

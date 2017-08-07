@@ -1,0 +1,43 @@
+---
+---
+
+@charset "UTF-8";
+
+$verde: #8ae234;
+$dark:  #363636;
+
+.max_1000 {
+  max-width: 1000px;
+}
+
+.font-awesome {
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+body {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+#top_bar {
+  .container {
+    @extend .max_1000;
+    justify-content: flex-end;
+  }
+  background-color: transparent;
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+
+  .navbar-item {
+    color: $verde;
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+@import
+  "terminal",
+  "eventos",
+  "contatos"
+;
