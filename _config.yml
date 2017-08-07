@@ -8,7 +8,7 @@ github: "https://github.com/sapucaiatech"
 markdown: kramdown
 
 # Gems
-plugins:
+gems:
   - jekyll-seo-tag
 
 sass:
