@@ -42,15 +42,27 @@ if (eventos) {
 
       eventos.innerHTML = response.data.map(evento => {
 
-        let dataEvento = new Date(evento.data);
-        dataEvento = `${ getData(dataEvento) } às ${ getHora(dataEvento) }h`;
+        let dataInicio = new Date(evento.data.inicio);
+        dataInicio = `${ getData(dataInicio) } às ${ getHora(dataInicio) }h`;
+
+        let dataFim = null;
+        if (!!evento.data.fim) {
+          dataFim = new Date(evento.data.fim);
+          dataFim = `${ getData(dataFim) } às ${ getHora(dataFim) }h`;
+        }
 
         return `
           <div class="column is-full evento">
             <h4 class="title is-4">${ evento.evento }</h4>
 
             ${ !!evento.data
-              ? `<time class="data" value="${ evento.data }">${ dataEvento }</time>`
+              ? `<p class="data">
+                  <time value="${ evento.data.inicio }">${ dataInicio }</time>
+                  ${ !!dataFim
+                    ? ` até <time value="${ evento.data.fim }">${ dataFim }</time>`
+                    : ''
+                  }
+                </p>`
               : ''
             }
 
