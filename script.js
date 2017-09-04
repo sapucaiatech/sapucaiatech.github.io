@@ -19,7 +19,7 @@ window.addEventListener('scroll', function(e) {
 
 if (eventos) {
 
-  axios.get('https://stormy-reaches-39727.herokuapp.com/eventos')
+  axios.get('https://kc0vdb8-sapucaiatech.wedeploy.io/eventos')
     .then(function (response) {
 
       function padZeroLeft(str) {
