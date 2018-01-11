@@ -1,8 +1,11 @@
 # Site Settings
 title: Sapucaia Tech | Comunidade de tecnologia de Montes Claros (MG)
 url: "http://sapucaia.tech"
+
+# Social
 telegram: "https://t.me/sapucaiatech"
 github: "https://github.com/sapucaiatech"
+youtube: "https://www.youtube.com/channel/UCaKqU9gsKgeaOshOwkvIIXA/videos"
 
 # Build settings
 markdown: kramdown
