@@ -1,5 +1,5 @@
 .contatos {
-  border-top: 10px solid #111;
+  @include border-top(#111);
 }
 .links {
   display: flex;

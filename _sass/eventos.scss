@@ -1,5 +1,5 @@
 #eventos {
-  border-top: 10px solid #222;
+  @include border-top(#222);
 }
 
 .eventos {

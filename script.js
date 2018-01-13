@@ -1,4 +1,5 @@
-(function ($) {
+(function () {
+  const $ = document.querySelector.bind(document);
   const terminal = $('#terminal');
   const topBar = $('#top_bar');
   const eventos = $('#lista-eventos');
@@ -103,4 +104,4 @@
     $('.menu-drop').classList.toggle('ativo');
   });
 
-})(document.querySelector.bind(document));
+})();
