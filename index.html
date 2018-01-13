@@ -35,4 +35,10 @@ layout: default
   </div>
 </section>
 
+{% if site.posts.size > 0 %}
+  {% include index_blog.html %}
+{% endif %}
+
+{% include proximo_encontro.html %}
+
 {% include agenda.html %}

@@ -1,0 +1,16 @@
+<section class="hero is-light" id="feed">
+  <a name="feed"></a>
+
+  <div class="hero-body">
+    <div class="container max_1000">
+      <h3 class="title is-bold is-3"><span class="fa fa-newspaper-o"></span>&nbsp;Blog</h3>
+
+      <hr>
+
+      {% for post in site.posts limit: 2  %}
+        <h1>{{ post.title }}</h1>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
