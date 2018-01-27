@@ -57,13 +57,7 @@
 
     a {
       font-weight: bold;
-
-      &::after {
-        content: "[ link ]";
-        transform: translate(0, -10px);
-        display: inline-block;
-        font-size: 10px;
-      }
+      text-decoration: underline;
     }
 
     p, ul {
