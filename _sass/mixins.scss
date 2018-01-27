@@ -1,0 +1,10 @@
+@mixin border-top($color) {
+  border-top: 10px solid $color;
+}
+
+
+@mixin media-query ($device) {
+  @media screen and ( $device ) {
+    @content
+  }
+}

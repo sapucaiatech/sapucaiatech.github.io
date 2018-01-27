@@ -4,20 +4,22 @@
   const topBar = $('#top_bar');
   const eventos = $('#lista-eventos');
 
+  // functions
+  const scrollAndPaint = function(e) {
+    let percent = window.scrollY <= 175 ? (window.scrollY / 175) : 1;
+    topBar.style.backgroundColor = `rgba(18, 18, 18, ${ percent })`;
+    topBar.style.boxShadow = `0 2px 6px rgba(0, 0, 0, ${ percent })`;
+  };
+
   if (terminal) {
+    window.addEventListener('scroll', scrollAndPaint);
+    window.addEventListener('load', scrollAndPaint);
+
+    topBar.style.backgroundColor = "transparent";
     terminal.addEventListener('click', function focus() {
       $('#cursor-blink').focus();
     });
   }
-
-  window.addEventListener('scroll', function(e) {
-
-    let percent = window.scrollY <= 175 ? (window.scrollY / 175) : 1;
-
-    topBar.style.backgroundColor = `rgba(18, 18, 18, ${ percent })`;
-    topBar.style.boxShadow = `0 2px 6px rgba(0, 0, 0, ${ percent })`;
-
-  });
 
   if (eventos) {
 

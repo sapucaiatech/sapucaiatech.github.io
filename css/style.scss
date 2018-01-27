@@ -3,72 +3,14 @@
 
 @charset "UTF-8";
 
-$verde: #8ae234;
-$dark:  #363636;
-$deep_dark: #121212;
-$light: #f5f5f5;
-
-@mixin border-top($color) {
-  border-top: 10px solid $color;
-}
-
-.max_1000 {
-  max-width: 1000px;
-}
-
-.font-awesome {
-  font: normal normal normal 14px/1 FontAwesome;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-body {
-  font-family: 'Ubuntu Mono', monospace;
-  background-size: auto;
-  background-image: url('/assets/black_geometric.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-#top_bar {
-  width: 100%;
-  color: $light;
-  justify-content: center;
-
-  @media screen and (min-width: 1008px) {
-    background-color: transparent;
-    position: fixed;
-    z-index: 9;
-  }
-
-  @media screen and (max-width: 1007px) {
-    background-color: $deep_dark !important;
-  }
-}
-
-.hero.is-black-alpha {
-  background-color: rgba(0,0,0,0.7);
-}
-
-.about {
-  @media screen and (min-width: 1008px) {
-    padding: 8em 0;
-    .logo {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-}
-
 @import
+  "variaveis",
+  "mixins",
+  "classes",
+  "base",
   "header",
   "terminal",
-  "index_blog",
+  "posts",
   "proximo",
   "eventos",
   "contatos"

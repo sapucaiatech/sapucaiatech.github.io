@@ -1,0 +1,50 @@
+body {
+  font-family: 'Ubuntu Mono', monospace;
+  background-size: auto;
+  background-image: url('/assets/black_geometric.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  @include media-query ($desktopUp) {
+    padding-top: 52px;
+  }
+}
+
+#top_bar {
+  width: 100%;
+  color: $light;
+  justify-content: center;
+  background-color: $deep_dark;
+
+  @include media-query ($desktopUp) {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+  }
+  @include media-query ($desktopDown) {
+    background-color: $deep_dark !important;
+  }
+}
+
+#home {
+  @include media-query ($desktopUp) {
+    margin-top: -52px;
+  }
+}
+
+.hero.is-black-alpha {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.about {
+  @include media-query ($desktopUp) {
+    padding: 8em 0;
+    .logo {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
