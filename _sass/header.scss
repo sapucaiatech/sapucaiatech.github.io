@@ -1,0 +1,49 @@
+.menu-bar {
+  border-bottom: 2px solid $light;
+  .menu-title {
+    color: inherit;
+    display: flex;
+    padding: 0 20px;
+    font-size: 1.3rem;
+    align-self: center;
+    img {
+      margin-right: 8px;
+      filter: invert(100%);
+    }
+  }
+  .navbar-burger {
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: 0;
+  }
+}
+
+.menu-drop {
+  display: none;
+  flex-direction: column;
+
+  .navbar-item {
+    color: $light;
+    &:hover {
+      color: $dark;
+    }
+
+    @media screen and (max-width: 1007px) {
+      &.pipe { display: none; }
+      width: 100%;
+      text-align: left;
+      border-bottom: 1px solid $light;
+    }
+  }
+
+  @media screen and (max-width: 1007px) {
+    &.ativo {
+      display: flex;
+    }
+  }
+
+  @media screen and (min-width: 1008px) {
+    flex-direction: row;
+  }
+}

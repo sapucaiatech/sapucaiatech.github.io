@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<section class="hero is-light">
+
+  <div class="hero-body">
+    <div class="container max_1000">
+      <h1 class="title is-bold is-3"><span class="fa fa-newspaper-o"></span>&nbsp;Blog</h1>
+
+      <hr>
+
+      <ul class="post-list columns is-multiline">
+        {% for post in site.posts %}
+        <li class="column is-half">
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+            <div class="post-excerpt">{{ post.excerpt }}</div>
+            <a href="{{ post.url | prepend: site.baseurl }}" class="button is-dark is-small">
+              Leia mais
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+  </div>
+</section>

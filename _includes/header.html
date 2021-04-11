@@ -1,12 +1,35 @@
-<nav class="navbar is-hidden-mobile" id="top_bar">
-  <div class="container navbar-brand">
-    <a href="#eventos" class="navbar-item">
-      <span class="fa fa-calendar-check-o"></span>&nbsp;eventos
+<nav class="navbar is-black-alpha" id="top_bar">
+  <div class="menu-bar is-flex is-hidden-desktop">
+    <a href="{{ site.url }}" class="menu-title">
+      <img alt="sapucaia.tech" src="/favicon.png" /> sapucaia.tech
+    </a>
+    <button class="button navbar-burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="navbar-brand is-flex-desktop menu-drop">
+    <a href="/" class="navbar-item" title="Home">
+      <span class="fa fa-home"></span>&nbsp;home
     </a>
 
-    <strong class="navbar-item">|</strong>
+    <strong class="navbar-item pipe">|</strong>
 
-    <a href="#contatos" class="navbar-item">
+    <a href="/blog" class="navbar-item" title="Blog do Sapucaia.Tech">
+      <span class="fa fa-newspaper-o"></span>&nbsp;blog
+    </a>
+
+    <strong class="navbar-item pipe">|</strong>
+
+    <a href="/#agenda" class="navbar-item" title="Agenda de Eventos">
+      <span class="fa fa-calendar"></span>&nbsp;agenda
+    </a>
+
+    <strong class="navbar-item pipe">|</strong>
+
+    <a href="#contatos" class="navbar-item" title="Contatos">
       <span class="fa fa-comments-o"></span>&nbsp;contatos
     </a>
   </div>

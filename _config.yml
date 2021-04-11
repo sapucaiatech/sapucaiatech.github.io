@@ -1,6 +1,10 @@
 # Site Settings
-title: Sapucaia Tech | Comunidade de tecnologia de Montes Claros (MG)
-url: "http://sapucaia.tech"
+title: Sapucaia.Tech | Comunidade de tecnologia de Montes Claros (MG)
+url: "https://sapucaia.tech"
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:title
 
 # Social
 telegram: "https://t.me/sapucaiatech"
